@@ -1,0 +1,61 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core" id="inputdialog">
+
+    <Dialog id="openDialog" title="Edit Content">
+        <VBox class="sapUiSmallMargin">
+
+            <f:SimpleForm id="SimpleFormDisplay354" editable="true" layout="ResponsiveGridLayout" 
+                
+                labelSpanXL="3" labelSpanL="3" labelSpanM="3" 
+                labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" 
+                emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" 
+                columnsL="1" columnsM="1" singleContainerFullSize="false">
+                <f:content>
+                    <!-- s.split(" ").splice(3,s.length).join(" ") -->
+                    <Label text="Approver Name : "></Label>
+                    <Text id="approverTextId" text="{dummyData>Approver}"/>
+
+                    <Label text="Casual  leave remaining : "></Label>
+                    <Text id="casualLeave_id" text="{dummyData>casualLeave}"></Text>
+
+                    <Label text="Sick leave remaining : "></Label>
+                    <Text id="sickLeave_id" text="{dummyData>sickLeave}"/>
+
+                    <Label text="Total Leaves : "></Label>
+                    <Text id="TotalDates" text="{dummyData>TotalDates}"></Text>
+
+                    <Label text="Half Days : "></Label>
+                    <Text id="halfDays" text="{dummyData>halfDays}"></Text>
+
+                    <Label text="Enter Leave Type : "></Label>
+                    <Input id="leave_type_id" value="{dummyData>leave_type}" />
+
+                    <Label text="Enter Leave Status : "></Label>
+                    <Input id="Status_id"  value="{dummyData>Status}"></Input>
+
+                    <Label text="Enter Leave Cancen Reason : "></Label>
+                    <Input id="leaveCancelReason" value="{dummyData>leaveCancelReason}"></Input>
+
+                    <Label text="Enter Start Date : "></Label>
+                    <Input type="Date" id="start_date" placeholder="{dummyData>start_date}"></Input>
+
+                    <Label text="Enter End Date : "></Label>
+                    <Input type="Date" id="end_date" placeholder="{dummyData>end_date}"></Input>
+                    
+                    <Label text="Enter Leave Reason : "></Label>
+                    <Input id="Reason" value="{dummyData>Reason}"></Input>
+                </f:content>
+            </f:SimpleForm>
+
+        </VBox>
+        <buttons>
+            <Button text="Update" press=".updateDialog"/>
+            <Button text="Cancel" press=".closeDialog"/>
+        </buttons>
+    </Dialog>
+
+
+
+</core:FragmentDefinition>

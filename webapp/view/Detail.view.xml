@@ -1,0 +1,147 @@
+<core:View displayBlock="true" height="100%" controllerName="webapp.controller.Detail"
+    xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:f="sap.f"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:grid="sap.ui.layout.cssgrid">
+    <ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="true" isChildPage="true" upperCaseAnchorBar="false">
+
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <actions>
+                    <m:OverflowToolbar class="sapFDynamicPageAlignContent">
+                        <m:OverflowToolbarButton icon="sap-icon://nav-back" text="Back" type="Transparent" press="backToHome"/>
+                        <m:OverflowToolbarButton icon="sap-icon://add" text="Add" type="Transparent" press="addElement"/>
+                        <!-- <m:OverflowToolbarButton icon="sap-icon://edit" text="Edit" type="Transparent" press=".editContextToggle"/> -->
+                    </m:OverflowToolbar>
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+
+        <ObjectPageSection title="Leaves Details ">
+            <subSections>
+                <ObjectPageSubSection>
+                    <blocks>
+     
+                        <m:Table id="leavesTable" inset="true" items="{path : 'dummyData>/demoModel'}">
+                            <m:columns>
+                                <m:Column width="50%">
+                                    <!-- <Text text="Details" /> -->
+                                </m:Column>
+                                <m:Column width="40%">
+                                    <!-- <Text text="Details" /> -->
+                                </m:Column>
+                                <m:Column width="10%">
+                                    <!-- <Text text="Details" /> -->
+                                </m:Column>
+                            </m:columns>
+                            <m:items >
+                                <m:ColumnListItem class="detailscard">
+                                    <grid:CSSGrid id="grid1" gridGap="1rem">
+                                        <m:VBox >
+                                            <grid:CSSGrid id="grid2" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://employee" size="1.0rem" color="blue" />
+                                                <m:Title text="Approver : {dummyData>Approver}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid3" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://bed" size="1.0rem" color="red" />
+                                                <m:Title text="Reason : {dummyData>Reason}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid4" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://accidental-leave" size="1.0rem" color="{
+                                                        path : 'dummyData>leave_type',
+                                                        formatter : '.leaveTypeFormatter' 
+                                                }" />
+                                                <m:Title text="Leave Type : {dummyData>leave_type}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid5" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://create-leave-request" size="1.0rem" color="green" />
+                                                <m:Title text="Total Leaves : {dummyData>TotalDates}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid14" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://cancel" size="1.0rem" color="red" />
+                                                <m:Title text="Leaves Cancel Reason : {dummyData>leaveCancelReason}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid13" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://status-completed" size="1.0rem" color="{
+                                                        path : 'dummyData>Status',
+                                                        formatter : '.leaveStatusFormater' 
+                                                }" />
+                                                <m:Title text="Leaves Status : {dummyData>Status}" wrapping="true" />
+                                            
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+                                    </grid:CSSGrid>
+
+                                    <grid:CSSGrid id="grid6" gridGap="1rem">
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid17" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://appointment" size="1.3rem" color="green" />
+                                                <m:Title text="{dummyData>start_date}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid18" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://appointment" size="1.3rem" color="red" />
+                                                <m:Title text="{dummyData>end_date}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid10" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://screen-split-two" size="1.0rem" color="green" />
+                                                <m:Title text="Half Days : {dummyData>halfDays}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid11" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://general-leave-request" size="1.0rem" color="green" />
+                                                <m:Title text="Casual Leave Remain : {dummyData>casualLeave}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid12" gridTemplateColumns="5% 60%" gridGap="1rem">
+                                                <core:Icon src="sap-icon://accidental-leave" size="1.0rem" color="green" />
+                                                <m:Title text="Sick Leave Remain : {dummyData>sickLeave}" wrapping="true" />
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+
+                                    </grid:CSSGrid>
+
+                                    <grid:CSSGrid id="grid8" gridGap="1rem">
+                                        <m:VBox>
+                                            <grid:CSSGrid id="grid9" gridTemplateColumns="20%" gridGap="1rem">
+                                                <m:Button icon="sap-icon://edit" type="Transparent" press=".editContextToggle"/>
+                                            </grid:CSSGrid>
+                                        </m:VBox>
+                                    </grid:CSSGrid>
+                                </m:ColumnListItem>
+                            </m:items>
+                        </m:Table>
+                    </blocks>
+                </ObjectPageSubSection>
+            </subSections>
+        </ObjectPageSection>
+    </ObjectPageLayout>
+
+
+
+</core:View>

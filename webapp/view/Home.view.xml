@@ -1,0 +1,36 @@
+<mvc:View controllerName="webapp.controller.Home"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f">
+	<m:App >
+		<!-- <ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" alwaysShowContentHeader="false" preserveHeaderStateOnScroll="false" headerContentPinnable="true" isChildPage="true" upperCaseAnchorBar="false">
+
+	            	<headerTitle>
+	            		<ObjectPageDynamicHeaderTitle class="sapUiSmallMarginTop">
+	            			<actions >
+                                <core:Icon src="sap-icon://add" press="goToCreateItemPage" />
+                                <core:Icon src=" | "/>
+                                <core:Icon src="sap-icon://customer" press="goToProfilePage"/>
+	            			</actions>
+	            		</ObjectPageDynamicHeaderTitle>
+	            	</headerTitle>
+
+
+	            </ObjectPageLayout> -->
+
+		<f:FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
+			<f:beginColumnPages>
+				<mvc:XMLView id="beginView" viewName="webapp.view.Master" />
+			</f:beginColumnPages>
+			<f:midColumnPages>
+				<mvc:XMLView id="detailView" viewName="webapp.view.Detail" />
+			</f:midColumnPages>
+		</f:FlexibleColumnLayout>
+	</m:App>
+</mvc:View>
+
+
+<!-- <core:HTML content="&lt;br &gt;" /> -->

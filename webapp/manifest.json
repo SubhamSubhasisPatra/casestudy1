@@ -1,0 +1,153 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "webapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"dataSources": {},
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"fullWidth": true
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "webapp.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.f": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "webapp.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"demo": {
+			"type": "sap.ui.model.json.JSONModel",
+			"uri": "Webapp/leaves.json"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "webapp.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "nHome",
+					"pattern": "",
+					"target": [
+						"tHome"
+					]
+				},
+				{
+					"name": "nProfile",
+					"pattern": "profile",
+					"target": [
+						"tProfile"
+					]
+				},
+				{
+					"name": "nDetail",
+					"pattern": "detail/{idOfData}",
+					"target": [
+						"tDetail"
+					]
+				},
+				{
+					"name": "nProfile222",
+					"pattern": "profile222",
+					"target": [
+						"tProfile"
+					]
+				},
+				{
+					"name": "nCreate",
+					"pattern": "create",
+					"target": [
+						"tCreate"
+					]
+				},
+				{
+					"name": "nBackToHome",
+					"pattern": "home",
+					"target": [
+						"tHome"
+					]
+				}
+			],
+			"targets": {
+				"tHome": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Home"
+				},
+				"tProfile": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Profile"
+				},
+				"tDetail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Detail"
+				},
+				"tCreate": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "CreateItem"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+<mvc:View
+ xmlns:mvc="sap.ui.core.mvc"
+ xmlns:forms="sap.ui.layout.form"
+ xmlns:layout="sap.ui.layout"
+ xmlns="sap.m"
+ xmlns:grid="sap.ui.layout.cssgrid">
+	<forms:SimpleForm editable="false" layout="ColumnLayout" columnsL="2" width="100%">
+           
+            <Label text="Phone Number" design="Bold"/>
+			<Text text="91+ 7978985585"/>
+
+			<Label text="Permanent Address" design="Bold"/>
+			<Text text="{i18n>Address}"/>
+            
+            <Label text="Email" design="Bold"/>
+            <Text text="{i18n>officeMailId}" />
+
+            <Label text="Work Accounts" design="Bold"/>
+            <Link text="{i18n>instagram}" />
+            <Link text="{i18n>github}" />
+ 
+	</forms:SimpleForm>
+</mvc:View>

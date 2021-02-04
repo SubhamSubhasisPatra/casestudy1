@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "leave_type": "casual leave",
+            "start_date": "01-04-2021",
+            "end_date": "01-09-2021",
+            "TotalDates": "42",
+            "halfDays": "13",
+            "Reason": "High Feaver",
+            "Approver": "Subham Patra",
+            "Status": "true",
+            "leaveCancelReason": "Other",
+            "casualLeave": "12",
+            "sickLeave": "10"
+        },
+        {
+            "leave_type": "sick leave",
+            "start_date": "12-21-2020",
+            "end_date": "12-29-2020",
+            "TotalDates": "42",
+            "halfDays": "17",
+            "Reason": "Covid 19",
+            "Approver": "Amit Rao",
+            "Status": "true",
+            "leaveCancelReason": "not sutable time",
+            "casualLeave": "22",
+            "sickLeave": "18"
+        },
+        {
+            "leave_type": "casual leave",
+            "start_date": "07-22-2020",
+            "end_date": "07-28-2020",
+            "TotalDates": "48",
+            "halfDays": "20",
+            "Reason": "Cold ",
+            "Approver": "Rajesh Kar",
+            "Status": "false",
+            "leaveCancelReason": "Internal Issue",
+            "casualLeave": "23",
+            "sickLeave": "8"
+        },
+        {
+            "leave_type": "sick leave",
+            "start_date": "06-15-2020",
+            "end_date": "06-29-2020",
+            "TotalDates": "42",
+            "halfDays": "24",
+            "Reason": "maleria",
+            "Approver": "sushree mishra",
+            "Status": "pending",
+            "leaveCancelReason": "No leaves remain",
+            "casualLeave": "22",
+            "sickLeave": "14"
+        }
+    ]
+}
+
+

@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+.sapMBarPH {
+  display: inline-flex;
+  align-items: left;
+  justify-content: left;
+  justify-content: l;
+}
+
+.card .sapMBarPH {
+  background-color: #eeeeee;
+  color: black;
+  border-radius: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+Input {
+  outline: none;
+  border-width: 0px;
+  border: none;
+}
+
+.sapMInputBaseInner {
+  border-width: 0px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  border-collapse: collapse;
+}
+
+ObjectPageDynamicHeaderTitle {
+  padding-right: 10px;
+}
+
+.detailscard {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.1),
+    0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  color: white;
+  background-color: #ffffff;
+}
+
+.sapFDynamicPageTitle {
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+
+.sapFDynamicPageHeader {
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+.sapMListItems{
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.sapMListTbl {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  border-radius: 15px;
+}

@@ -1,0 +1,17 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
+	<forms:SimpleForm editable="false" layout="ColumnLayout">
+
+			<Label text="About Me" design="Bold"/>
+			<Text text="This is Subhasis , Currenty I'm an intern at Maventic"/>
+
+			<Label text="Education" design="Bold"/>
+			<Text text="B.Tech At GITA, Bhubaneswar Ordisha"/>
+
+			<Label text="12Th" design="Bold"/>
+			<Text text="RP Residential College , Cuttack "/>
+
+			<Label text="10Th" design="Bold"/>
+			<Text text="Badamba High School , Cuttack "/>
+
+	</forms:SimpleForm>
+</mvc:View>
